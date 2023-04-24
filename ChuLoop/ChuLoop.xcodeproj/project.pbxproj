@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC51616029F6C4AA00BED564 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51615F29F6C4AA00BED564 /* TabbarView.swift */; };
 		BCD6B14B29F6C07D0047CB0C /* ChuLoopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6B14A29F6C07D0047CB0C /* ChuLoopApp.swift */; };
 		BCD6B14D29F6C07D0047CB0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6B14C29F6C07D0047CB0C /* ContentView.swift */; };
 		BCD6B14F29F6C07E0047CB0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD6B14E29F6C07E0047CB0C /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC51615F29F6C4AA00BED564 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		BCD6B14729F6C07D0047CB0C /* ChuLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD6B14A29F6C07D0047CB0C /* ChuLoopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuLoopApp.swift; sourceTree = "<group>"; };
 		BCD6B14C29F6C07D0047CB0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				BCD6B14C29F6C07D0047CB0C /* ContentView.swift */,
 				BCD6B14E29F6C07E0047CB0C /* Assets.xcassets */,
 				BCD6B15029F6C07E0047CB0C /* Preview Content */,
+				BC51615F29F6C4AA00BED564 /* TabbarView.swift */,
 			);
 			path = ChuLoop;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC51616029F6C4AA00BED564 /* TabbarView.swift in Sources */,
 				BCD6B14D29F6C07D0047CB0C /* ContentView.swift in Sources */,
 				BCD6B14B29F6C07D0047CB0C /* ChuLoopApp.swift in Sources */,
 			);
