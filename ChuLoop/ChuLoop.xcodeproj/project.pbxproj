@@ -12,9 +12,13 @@
 		BCD6B14D29F6C07D0047CB0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6B14C29F6C07D0047CB0C /* ContentView.swift */; };
 		BCD6B14F29F6C07E0047CB0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD6B14E29F6C07E0047CB0C /* Assets.xcassets */; };
 		BCD6B15229F6C07E0047CB0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD6B15129F6C07E0047CB0C /* Preview Assets.xcassets */; };
+		DF2853A93E898C606DD0E180 /* Pods_ChuLoop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E38CD1D04D6937A4996FD84 /* Pods_ChuLoop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E38CD1D04D6937A4996FD84 /* Pods_ChuLoop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuLoop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9536D5A7C2D5DA7969CC6366 /* Pods-ChuLoop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuLoop.release.xcconfig"; path = "Target Support Files/Pods-ChuLoop/Pods-ChuLoop.release.xcconfig"; sourceTree = "<group>"; };
+		9FBD07CA8E81FAE409E5363F /* Pods-ChuLoop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuLoop.debug.xcconfig"; path = "Target Support Files/Pods-ChuLoop/Pods-ChuLoop.debug.xcconfig"; sourceTree = "<group>"; };
 		BC51615F29F6C4AA00BED564 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		BCD6B14729F6C07D0047CB0C /* ChuLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD6B14A29F6C07D0047CB0C /* ChuLoopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuLoopApp.swift; sourceTree = "<group>"; };
@@ -28,17 +32,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2853A93E898C606DD0E180 /* Pods_ChuLoop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D687C968C9A38BCA7F923BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E38CD1D04D6937A4996FD84 /* Pods_ChuLoop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCD6B13E29F6C07D0047CB0C = {
 			isa = PBXGroup;
 			children = (
 				BCD6B14929F6C07D0047CB0C /* ChuLoop */,
 				BCD6B14829F6C07D0047CB0C /* Products */,
+				D3B9DC29526F091951FE1887 /* Pods */,
+				5D687C968C9A38BCA7F923BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D3B9DC29526F091951FE1887 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD07CA8E81FAE409E5363F /* Pods-ChuLoop.debug.xcconfig */,
+				9536D5A7C2D5DA7969CC6366 /* Pods-ChuLoop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD6B15529F6C07E0047CB0C /* Build configuration list for PBXNativeTarget "ChuLoop" */;
 			buildPhases = (
+				083EC324E2BA8B111B244E5F /* [CP] Check Pods Manifest.lock */,
 				BCD6B14329F6C07D0047CB0C /* Sources */,
 				BCD6B14429F6C07D0047CB0C /* Frameworks */,
 				BCD6B14529F6C07D0047CB0C /* Resources */,
+				0A4F0B930EAE233DF053B208 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		083EC324E2BA8B111B244E5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChuLoop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A4F0B930EAE233DF053B208 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChuLoop/Pods-ChuLoop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChuLoop/Pods-ChuLoop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChuLoop/Pods-ChuLoop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCD6B14329F6C07D0047CB0C /* Sources */ = {
@@ -199,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -253,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -265,12 +333,14 @@
 		};
 		BCD6B15629F6C07E0047CB0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FBD07CA8E81FAE409E5363F /* Pods-ChuLoop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChuLoop/Preview Content\"";
+				DEVELOPMENT_TEAM = B575A5584Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -293,12 +363,14 @@
 		};
 		BCD6B15729F6C07E0047CB0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9536D5A7C2D5DA7969CC6366 /* Pods-ChuLoop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChuLoop/Preview Content\"";
+				DEVELOPMENT_TEAM = B575A5584Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -329,7 +401,7 @@
 				BCD6B15429F6C07E0047CB0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BCD6B15529F6C07E0047CB0C /* Build configuration list for PBXNativeTarget "ChuLoop" */ = {
 			isa = XCConfigurationList;
@@ -338,7 +410,7 @@
 				BCD6B15729F6C07E0047CB0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
