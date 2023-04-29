@@ -14,7 +14,7 @@ struct TabbarView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            Text("Main")
+            MainView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("홈")
